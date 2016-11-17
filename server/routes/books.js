@@ -3,6 +3,8 @@ var router = express.Router();
 var pg = require('pg');
 var connectionString = 'postgres://localhost:5432/sigma';
 
+
+
 router.get('/', function(req, res) {
   // get books from DB
   pg.connect(connectionString, function(err, client, done) {
@@ -38,7 +40,7 @@ router.get('/genre/:selectedGenre', function(req, res){
     }
 
     client.query(
-      "SELECT * FROM books WHERE genre = '$1';",
+      "SELECT * FROM books WHERE genre = $1;",
       [bookGenre],
 
       function(err, result){

@@ -98,8 +98,7 @@ function selectGenre(){
     type: 'GET',
     url: '/books/genre/' + selectedGenre,
     success: function(books) {
-      console.log('returned from server:', books);
-      // appendBooks(books);
+      appendBooks(books);
     },
     error: function() {
       console.log('Database error');
