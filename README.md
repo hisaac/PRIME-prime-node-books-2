@@ -1,5 +1,9 @@
 # Node to Postgres Lecture
 
+This expands upon the first node-books assignment.
+
+---
+
 Covers creating a CRUD application with Node/Express and PostgreSQL.
 
 ## Takeaways
